@@ -1,0 +1,25 @@
+﻿$colors: (
+  'brand': hsl(9, 66%, 50%),
+  'body': hsl(0, 8%, 26%),
+  'bg': hsl(0, 0%, 100%),
+  'gray': hsl(0, 0%, 51%),
+  'gray2': hsl(0, 0%, 20%)
+);
+
+$brand: hsl(9, 66%, 50%);
+$body:hsl(0, 8%, 26%);
+$bg:hsl(0, 0%, 100%);
+$gray1:hsl(0, 0%, 51%);
+$gray2:hsl(0, 0%, 20%);
+
+
+
+
+
+
+// The mixin to apply the CSS Custom Properties to the :root
+@mixin apply-colors($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{$value};
+  }
+}

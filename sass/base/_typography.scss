@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+@use "sass:map";
+
+$ff-body:'Lato', sans-serif;
+$ff-heading:'Inter', sans-serif;
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff-heading;
+  
+}
+
+h1 {
+    
+    font-size: var(--fs-top-level-heading);
+    font-weight:var(--fw-bold);
+}
+
+h2 {
+    font-size: var(--fs-mid-level-heading);
+}
+
+h3 {
+    font-size: var(--fs-sub-level-heading);
+}
+
+p {
+   
+    font-family: $ff-body;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+}
+
+
+
+

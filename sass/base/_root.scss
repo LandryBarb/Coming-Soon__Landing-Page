@@ -1,0 +1,77 @@
+﻿
+@use "sass:string";
+@use '../abstracts' as *;
+
+
+:root {
+    /***** 
+    START Color Palette
+    *******/
+    @include apply-colors($colors);
+  
+    --site-bg:var(--bg);
+    --body-text:var(--body);
+    --branding:var(--brand);
+    --gray-light:var(--gray);
+    --gray-dark:var(--gray2);
+
+        /*****
+        End COLOR PALETTE
+        *****/
+
+    /**Font Scale **/
+    @each $step, $sizes in $font-scale {
+        @each $size, $value in $sizes {
+            --step-#{$size}: #{$value};
+        }
+    }
+    /**End Font Scale **/
+    /**Font Weights**/
+    @each $font-size, $value in $font-weights {
+        --fw-#{$font-size}: #{$value};
+    }
+    /**End Font Weights**/
+
+     /**SPACING**/
+     @each $space-size, $value in $spacing {
+        $number: string.slice($space-size, 7);
+        --space-#{$number}: #{$value};
+    }
+    /**End SPACING**/
+    
+/**CUSTOM PROPS***/
+    /**FONT SIZES**/
+    --fs-top-level-heading: 48px;
+
+    --fs-body: var(--step-1);
+    
+    --fs-primary-links: var(--step-2);
+    /**END FONT SIZES**/
+
+    // COLOR NAMING INDEX
+    // 1) BASE - prefix = --clr
+    //     - night    
+    //     - light
+    //     - wood
+    //     - dust
+    //     - bronze
+    // 2) BRANDING - prefix = --brnd
+    //     - egg
+    //     - smoke
+    //     - coffee 
+    //     - almond
+    //     - sand
+    // 3) UX - prefix = --ux
+    //     - info
+    //     - error
+    //     - warning
+    //     - success
+
+   
+
+ 
+
+   
+
+   
+}
